@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>request test</title>
+    <meta name="author" content="Sylvie Luo">
+    <meta name="description" content="lifelong-romance's web pages">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1,user-scalable=no" />
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="../../style/index.css">
+</head>
+<style type="text/css">
+    .receiver-edit {
+        padding: 80px 0px 0px 30px;
+        margin: 20px;
+        width: 100%;
+    }
+
+    .title {
+        font-weight: bold;
+        width: 80px;
+    }
+
+    .dynamic {
+        margin-left: 80px;
+        width: 80%;
+        box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .1);
+        border-radius: 4px;
+        border: 1px solid #EBEEF5;
+        background-color: #FFF;
+        overflow: hidden;
+        color: #303133;
+        transition: .3s;
+        padding: 20px;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <object class="object" type="text/x-scriptlet" data="../component/head.html"></object>
+    <div class="receiver-edit">
+        <table class="dynamic" id="dynamicAdd">
+            <tr>
+                <th>编号</th>
+                <th>创建时间</th>
+                <th>姓名</th>
+            </tr>
+        </table>
+    </div>
+    <object id="foot" type="text/x-scriptlet" data="../component/foot.html"></object>
+</body>
+<script>
+    window.onload = function () {
+        $.ajax({
+            url: "https://631333b8a8d3f673ffc6500b.mockapi.io/users",
+            type: "get",
+            dataType: "json",
+            success: function (data) {
+                showData(data)
+            },
+            error: function (msg) {
+                alert("ajax连接异常：" + msg);
+            }
+        });
+    };
+ 
+    function showData(data) {
+        var str = "";
+        for (var i = 0; i < data.length; i++) {
+            str =
+                "<tr> <td>" + data[i].id + "</td><td>"
+                + data[i].createdAt+ "</td><td>"
+                + data[i].name + "</td></tr> "
+            $("#dynamicAdd").append(str);
+        }
+    }
+</script>
+
+</html>

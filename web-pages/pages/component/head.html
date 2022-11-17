@@ -1,0 +1,135 @@
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    html,
+    body {
+        width: 100%;
+    }
+
+    #header {
+        background-color: #fff;
+        padding: 10px 1.6%;
+        text-align: center;
+        border-bottom: .05rem solid #e5e5e5;
+    }
+
+    #header a {
+        display: inline-block;
+        padding: 0 50px;
+        font-size: 16px;
+        color: rgb(62, 57, 66);
+        text-decoration: none;
+    }
+
+    #header a:hover {
+        color: rgb(111, 19, 208);
+        text-decoration: underline;
+    }
+
+    /* 导航栏按钮 */
+    .btn {
+        display: none;
+        float: right;
+        margin-top: 5px;
+        border: 0;
+        border-radius: 5px;
+        width: 40px;
+        height: 40px;
+    }
+
+    /* 文字Logo */
+    #header a.logo {
+        float: left;
+        font-size: 1.6rem;
+        line-height: 50px;
+        font-family: Amiri, Georgia, "Times New Roman", serif;
+        color: rgb(111, 19, 208);
+        text-decoration: none;
+    }
+
+    #header a.logo:hover {
+        text-decoration: underline;
+    }
+
+    #header div.nav {
+        height: 50px;
+        background-color: #fff;
+    }
+
+    #header ul.nav-bar {
+        list-style: none;
+        float: right;
+        line-height: 50px;
+    }
+
+    #header ul.nav-bar li {
+        float: left;
+        padding: 0 10px;
+    }
+
+    @media screen and (max-width: 1100px) {
+        #header {
+            padding: 10px 5%;
+            height: 50px;
+            overflow: hidden;
+        }
+
+        #header a.logo {
+            line-height: 55px;
+            font-size: 30px;
+        }
+
+        .btn {
+            margin-top: 9px;
+            display: block;
+        }
+
+        #header ul.nav-bar {
+            margin-top: 15px;
+            border-top: solid 1px #111;
+            width: 100%;
+        }
+
+        #header ul.nav-bar li {
+            float: none;
+            padding: 0 10px;
+        }
+    }
+</style>
+<div id="header">
+    <div class="nav">
+        <a href="../index/index.html" class="logo" target="_blank">lifelong-romance</a>
+        <div id="nav-btn" class="btn">
+            <img src="../../images/menu.png" style="margin: 5px;width: 30px;height:30px;" />
+        </div>
+        <ul class="nav-bar">
+            <li><a href="../self/intro.html" target="_blank">个人简介</a></li>
+            <li><a href="../game/9x9.html" target="_blank">9*9乘法表</a></li>
+            <!-- <li><a href="#" target="_blank">井字棋小游戏</a></li> -->
+            <li><a href="../game/test.html" target="_blank">request test</a></li>
+            <li><a href="../sign/signinup.html" target="_blank">退出</a></li>
+        </ul>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+<script type="text/javascript">
+    // 开关状态
+    var open = false;
+
+    $('#nav-btn').click(function () {
+        // 按钮状态
+        $(this).css("background-color", open ? '#fff' : '#efefef');
+        var navBar = $('.nav-bar');
+        // 设置header的高度，将导航列表显示出来
+        var height = navBar.offset().top + navBar.height();
+        $('#header').animate({
+            height: open ? 50 : height
+        });
+        // 修改开关状态
+        open = !open;
+    });
+
+</script>

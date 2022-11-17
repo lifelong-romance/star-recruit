@@ -1,0 +1,166 @@
+.box {
+    margin-top: 90px;
+    padding: 0 140px 0 140px;
+}
+
+.rank_1 {
+    font-weight: bold;
+    font-size: 24px;
+
+}
+
+.rank_2 {
+    padding-top: 5px;
+    line-height: 30px;
+    font-size: 16px;
+}
+
+.divide_line {
+    margin: 2px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.description {
+    padding: 5px 0px 10px 18px;
+    line-height: 30px;
+    font-size: 16px;
+}
+
+.tmp {
+    height: 30px;
+}
+
+.a1 {
+    animation: aa 1s 0s normal;
+}
+
+.a2 {
+    animation: bb 1s 0s normal;
+}
+
+.a3 {
+    animation: cc 1s 0s normal;
+}
+
+.b1 {
+    animation: aa 10s 0s normal;
+}
+
+.b2 {
+    animation: bb 2s 0s normal;
+}
+
+.b3 {
+    animation: cc 2s 0s normal;
+}
+
+.c1 {
+    animation: aa 20s 0s normal;
+}
+
+.c2 {
+    animation: bb 3s 0s normal;
+}
+
+.c3 {
+    animation: cc 3s 0s normal;
+}
+
+.d1 {
+    animation: aa 30s 0s normal;
+}
+
+.d2 {
+    animation: bb 4s 0s normal;
+}
+
+.d3 {
+    animation: cc 4s 0s normal;
+}
+
+.e1 {
+    animation: aa 40s 0s normal;
+}
+
+.e2 {
+    animation: bb 5s 0s normal;
+}
+
+.e3 {
+    animation: cc 5s 0s normal;
+}
+
+.f1 {
+    animation: aa 50s 0s normal;
+}
+
+.f2 {
+    animation: bb 6s 0s normal;
+}
+
+.f3 {
+    animation: cc 6s 0s normal;
+}
+
+.g1 {
+    animation: aa 60s 0s normal;
+}
+
+.g2 {
+    animation: bb 7s 0s normal;
+}
+
+.g3 {
+    animation: cc 7s 0s normal;
+}
+
+@keyframes aa {
+    0% {
+        opacity: 0
+    }
+
+    33% {
+        opacity: 100%
+    }
+
+    66% {
+        opacity: 100%
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+@keyframes bb {
+    0% {
+        opacity: 0
+    }
+
+    33% {
+        opacity: 0
+    }
+
+    66% {
+        opacity: 100%
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+@keyframes cc {
+    0% {
+        opacity: 0
+    }
+
+    66% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 100%
+    }
+}

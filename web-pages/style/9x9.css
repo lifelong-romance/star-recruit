@@ -1,0 +1,20 @@
+table,
+table tr td {
+    border: 1px solid rgb(111, 19, 208);
+}
+
+table {
+    width: 200px;
+    min-height: 25px;
+    line-height: 25px;
+    text-align: center;
+    border-collapse: collapse;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+
+}
+
+.tab {
+    padding: 4.78rem;
+}

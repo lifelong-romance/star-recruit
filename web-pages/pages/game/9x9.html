@@ -1,39 +1,36 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title></title>
-	<style>
-        table,table tr td{ 
-			border:1px solid #0094ff; }
-        table {
-			width: 200px; 
-			min-height: 25px; 
-			line-height: 25px;
-			text-align: center;
-			border-collapse: collapse;
-		}   
-    </style>
-	</head>
-	<body>
+
+<head>
+	<meta charset="UTF-8">
+    <title>9x9乘法表</title>
+    <meta name="author" content="Sylvie Luo">
+    <meta name="description" content="lifelong-romance's web pages">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1,user-scalable=no" />
+	<link rel="stylesheet" href="../../style/index.css">
+	<link rel="stylesheet" href="../../style/9x9.css">
+</head>
+
+<body>
+	<object class="object" type="text/x-scriptlet" data="../component/head.html"></object>
+
+	<div class="tab">
 		<script type="text/javascript">
 			var myTable = document.createElement("table");
-			//使用两层表for循环嵌套动态创建表格的tr和td节点
-			for(var i=1;i<=9;i++) {
-				//创建<tr
+			for (var i = 1; i <= 9; i++) {
 				var tr = document.createElement("tr");
-				for(var j=1;j<=9;j++) {
+				for (var j = 1; j <= 9; j++) {
 					var td = document.createElement("td");
-					//设置td内部的文本
-					td.innerHTML = i + "X" + j + "=" + (i*j);
-					//追加td
+					td.innerHTML = i + "X" + j + "=" + (i * j);
 					tr.appendChild(td);
 				}
-				//追加tr
 				myTable.appendChild(tr);
 			}
 			document.body.appendChild(myTable);
 		</script>
-		
-	</body>
+	</div>
+	<div class="tab"></div>
+	<object id="foot" type="text/x-scriptlet" data="../component/foot.html"></object>
+</body>
+
 </html>

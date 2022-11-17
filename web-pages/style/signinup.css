@@ -51,6 +51,21 @@ a {
     background-color: rgb(111, 19, 208);
     position: relative;
     z-index: 1;
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.7s ease-in-out 0s;
+}
+
+.right {
+    height: 100%;
+    float: right;
+    width: 50%;
+    background-color: rgb(111, 19, 208);
+    position: relative;
+    z-index: 1;
+    opacity: 0;
+    transform: translateY(0);
+    transition: all 0.7s ease-in-out 0s;
 }
 
 .container {
@@ -136,7 +151,7 @@ a {
 
 .txtb span::before {
     content: attr(data-placeholder);
-    display: inline-block; 
+    display: inline-block;
     position: absolute;
     top: 50%;
     left: 5px;
@@ -148,7 +163,7 @@ a {
 .txtb span::after {
     content: '';
     position: absolute;
-    display: inline-block; 
+    display: inline-block;
     left: 0%;
     top: 100%;
     width: 0%;
@@ -279,9 +294,11 @@ button.ghost {
     .left {
         width: 50%;
     }
+
     .txtb input {
         width: 160px;
     }
+
     .overlay-panel {
         padding: 0 25px;
     }
@@ -293,9 +310,11 @@ button.ghost {
         display: block;
         height: 100%;
     }
+
     .txtb input {
         width: 120px;
     }
+
     .overlay-panel {
         padding: 0 8px;
     }
